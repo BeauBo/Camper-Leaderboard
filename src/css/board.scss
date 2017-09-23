@@ -1,0 +1,82 @@
+$mainColor: #7777bb;
+$offWhite: #f8f9fb;
+
+@mixin table-header {
+    cursor: pointer;
+    text-align:center;
+    padding: 10px;
+    font: bold 15px;
+    color: $offWhite;
+    width: 30%;
+    background-color: $mainColor;
+    &:hover{
+        background-color: lighten($mainColor, 6);
+    }
+    
+}
+
+@mixin table-data{
+    text-align:center;
+    padding: 10px;
+    font-weight: bold;
+    color: $mainColor;
+    font-family: aria;
+    a{
+        text-decoration: none;
+    }
+}
+
+table{
+    width:100%;
+}
+
+
+//Table header
+
+.rank_header{
+   @include table-header;
+   width: 10%;
+   
+}
+.users_header{
+    @include table-header;
+    
+}
+.past30_selected, .allTime_selected{
+    @include table-header;
+    background-color: complement($mainColor) ;
+    
+ 
+}
+
+.past30, .allTime{
+   @include table-header;
+}
+
+
+//Table data
+.users,.last30Points,.allTimePoints{
+    @include table-data;
+    width: 30%;
+    img{
+        width: 20px;
+        height: 20px;
+        padding-right: 5px;
+    }
+
+}
+
+.rank{
+    @include table-data;
+    width: 10%;
+}
+
+
+tr:nth-child(even){
+    background-color:lighten($mainColor, 33);
+}
+
+
+
+
+

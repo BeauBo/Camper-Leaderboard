@@ -1,0 +1,58 @@
+
+$mainColor: #7777bb;
+$offWhite: #f8f9fb;
+
+@mixin boxSize{
+    height: 50px;
+    width: 100%;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#container{
+    padding: 10px;
+    font-family: Tahoma;
+    background-color:lighten($mainColor,40);
+    .banner{
+        @include boxSize;
+        box-sizing: border-box;
+        padding: 10px;
+        background: $mainColor ;
+        font-weight: bold;
+        font-size: 30px;
+        color: $offWhite;
+    }
+    .leaderBoard{
+        margin: 40px auto;
+        width: 67%;
+        .header{
+            @include boxSize;
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+            color: $mainColor;
+            padding: 10px;
+        }
+    }
+    
+    
+    
+    footer{
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+        font-family: Tahoma;
+        color: $offWhite;
+        background-color: $mainColor;
+        a{
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+
